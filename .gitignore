@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# DataSet files
+.csv
+
+# API Key files
+kaggle.json
