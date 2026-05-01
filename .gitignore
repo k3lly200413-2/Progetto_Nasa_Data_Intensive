@@ -218,7 +218,7 @@ __marimo__/
 .streamlit/secrets.toml
 
 # DataSet files
-.csv
+/nasa-near-earth-asteroids-and-close-approaches
 
 # API Key files
 kaggle.json
