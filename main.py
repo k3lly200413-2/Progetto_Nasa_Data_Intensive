@@ -19,7 +19,11 @@ import opendatasets as od
 
 
 def main():
-    od.download("https://www.kaggle.com/datasets/darkmatternet/nasa-near-earth-asteroids-and-close-approaches")
+    if not path.exists("nasa-near-earth-asteroids-and-close-approaches/asteroid_close_approaches_2015_2035 (1).csv") or not path.exists("nasa-near-earth-asteroids-and-close-approaches/near_earth_asteroids_2025 (1).csv"):
+        od.download("https://www.kaggle.com/datasets/darkmatternet/nasa-near-earth-asteroids-and-close-approaches")
+    
+    data = pd.read_csv("nasa-near-earth-asteroids-and-close-approaches/asteroid_close_approaches_2015_2035 (1).csv").drop("full_name")
+    print(data.head(5))
     
 
 if __name__ == "__main__":
